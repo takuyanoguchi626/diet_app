@@ -1,6 +1,28 @@
 @charset 'utf-8';
 
+@font-face {
+    font-family: 'Noto Sans JP';
+    font-weight: 400;
+    src: url("/static/fonts/NotoSansJP-Regular.woff2");
+}
+@font-face {
+    font-family: 'Noto Sans JP';
+    font-weight: 500;
+    src: url("/static/fonts/NotoSansJP-Black.woff2");
+}
 
-html{
+
+html {
     font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Sans JP";
+    line-height: 1.6;
 }

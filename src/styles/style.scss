@@ -1,14 +1,20 @@
 @charset 'utf-8';
 
 // base
+@import "./base/normalize.scss";
 @import "./base/base.scss";
-@import "./base/basic.scss";
+
+// function
+@import "./function/basic.scss";
 
 // layout
 @import "./layout/flex.scss";
 
 // module
 @import "./module/header.scss";
+@import "./module/navi.scss";
+@import "./module/top.scss";
+@import "./module/card.scss";
 
 // utility
-@import "./utility/title.scss";
+@import "./utility/utility.scss";
