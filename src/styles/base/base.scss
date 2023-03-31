@@ -5,6 +5,7 @@
     font-weight: 400;
     src: url("/static/fonts/NotoSansJP-Regular.woff2");
 }
+
 @font-face {
     font-family: 'Noto Sans JP';
     font-weight: 500;
@@ -25,4 +26,8 @@ html {
 body {
     font-family: "Noto Sans JP";
     line-height: 1.6;
+}
+
+p {
+    margin: 0;
 }

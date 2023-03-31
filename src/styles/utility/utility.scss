@@ -1,65 +1,46 @@
 @charset 'utf-8';
 
 // title
-.title_12{
-    font-size: 1.2rem;
-}
-.title_16{
-    font-size: 1.6rem;
-}
-.title_18{
+.title_18 {
     font-size: 1.8rem;
 }
 
-// padding
-.pt_16{
-    padding-top: 1.6rem;
+.title_24 {
+    font-size: 2.4rem;
 }
-.pr_16{
+
+// padding
+.pr_16 {
     padding-right: 1.6rem;
 }
-.pb_16{
-    padding-bottom: 1.6rem;
-}
-.pl_16{
+
+.pl_16 {
     padding-left: 1.6rem;
 }
 
-.pt_24{
+.pt_24 {
     padding-top: 2.4rem;
-}
-.pr_24{
-    padding-right: 2.4rem;
-}
-.pb_24{
-    padding-bottom: 2.4rem;
-}
-.pl_24{
-    padding-left: 2.4rem;
 }
 
 // margin
-.ml_at{
+.ml_at {
     margin-left: auto;
 }
-.ml_12{
+
+.ml_12 {
     margin-left: 1.2rem;
 }
 
-.mt_16{
-    margin-top: 1.6rem;
-}
-.mr_16{
-    margin-right: 1.6rem;
-}
-.mb_16{
-    margin-bottom: 1.6rem;
-}
-.ml_16{
-    margin-left: 1.6rem;
+.mt_24 {
+    margin-top: 2.4rem;
 }
 
+
 // text-align
-.text_center{
+.text_center {
     text-align: center;
+}
+
+.text_right {
+    text-align: right;
 }
