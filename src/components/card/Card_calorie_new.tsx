@@ -1,45 +1,35 @@
 import React, { useState } from 'react'
 import { Food_calorie_new } from "../../types/Food_calorie"
 import Material_symbols from "../icon/Material_symbols"
+import { useSelector, useDispatch } from "react-redux/es/exports"
+import { decrement, increment } from "../../providers/slices/Slice_new_meal"
 
-const Card_calorie_new = () => {
-    const food_calories: Food_calorie_new[] = [
-        {
-            icon: "rice_bowl",
-            text: "お茶碗１杯分",
-            calorie: 343,
-        },
-        {
-            icon: "rice_bowl",
-            text: "お茶碗１杯分",
-            calorie: 343,
-        },
-        {
-            icon: "rice_bowl",
-            text: "お茶碗１杯分",
-            calorie: 343,
-        },
-    ]
+type props = {
+    food_calorie_new_arr: Food_calorie_new[]
+}
 
-    const [value, setValue] = useState(3)
+const Card_calorie_new = (props: props) => {
+    const value = useSelector((state: any) => state.new_meal.value)
+    const dispatch = useDispatch()
+    // const [value, setValue] = useState(3)
 
-    const inc_value = () => {
-        setValue((val) => val + 1);
-    }
+    // const inc_value = () => {
+    //     setValue((val) => val + 1);
+    // }
 
-    const dec_value = () => {
-        setValue((val) => {
-            if (val > 0) {
-                return val - 1;
-            } else {
-                return val;
-            }
-        })
-    }
+    // const dec_value = () => {
+    //     setValue((val) => {
+    //         if (val > 0) {
+    //             return val - 1;
+    //         } else {
+    //             return val;
+    //         }
+    //     })
+    // }
 
     return (
         <div className="card card_table card_table_new">
-            {food_calories.map((food_calorie, key) => {
+            {props.food_calorie_new_arr.map((food_calorie, key) => {
                 return (
                     <div key={key} className="l_flex card_item">
                         <div className="l_flex card_item_body">
@@ -50,11 +40,11 @@ const Card_calorie_new = () => {
                             </div>
                         </div>
                         <div className="card_item_amount">
-                            <button className="card_arrow" onClick={() => inc_value()}>
+                            <button className="card_arrow" onClick={() => dispatch(increment())}>
                                 <Material_symbols name="expand_less"></Material_symbols>
                             </button>
                             <span className="card_number_text">{value}</span>
-                            <button className="card_arrow" onClick={() => dec_value()}>
+                            <button className="card_arrow" onClick={() => dispatch(decrement())}>
                                 <Material_symbols name="expand_more"></Material_symbols>
                             </button>
                         </div>

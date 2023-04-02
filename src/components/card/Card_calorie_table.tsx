@@ -4,18 +4,21 @@ import { Food_calorie_table } from "../../types/Food_calorie"
 const Card_calorie_table = () => {
     const food_calories: Food_calorie_table[] = [
         {
+            name: "rice",
             icon: "rice_bowl",
             text: "お茶碗１杯分",
             calorie: 343,
             amount: 2
         },
         {
+            name: "rice",
             icon: "rice_bowl",
             text: "お茶碗１杯分",
             calorie: 343,
             amount: 2
         },
         {
+            name: "rice",
             icon: "rice_bowl",
             text: "お茶碗１杯分",
             calorie: 343,
