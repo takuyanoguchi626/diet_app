@@ -1,6 +1,6 @@
 export type Calorie = {
-    icon: String,
-    title: String,
-    calorie: String,
-    class_name?: String
+    icon: string,
+    title: string,
+    calorie: number,
+    class_name?: string
 }

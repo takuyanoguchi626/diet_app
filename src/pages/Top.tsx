@@ -6,10 +6,10 @@ import Card_calorie_table from "../components/card/Card_calorie_table"
 export default function Top() {
 	return (
 		<Layout>
-			<div className='pt_24 pr_16 pl_16 l_layout'>
+			<div className='pt_24 pr_16 pl_16 pb_90 l_layout'>
 				<div className='title_24 text_center'>今日のカロリー目安</div>
-				<Card_calorie icon={"restaurant"} title={"食事の目安"} calorie={"3000"}></Card_calorie>
-				<Card_calorie class_name={"mt_24"} icon={"fitness_center"} title={"運動の目安"} calorie={"3000"}></Card_calorie>
+				<Card_calorie icon={"restaurant"} title={"食事の目安"} calorie={3000}></Card_calorie>
+				<Card_calorie class_name={"mt_24"} icon={"fitness_center"} title={"運動の目安"} calorie={3000}></Card_calorie>
 				<div className='title_24 text_center'>今日のカロリー計画</div>
 				<div className='l_flex'>
 					<p className='title_24'>合計カロリー</p>
