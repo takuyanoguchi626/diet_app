@@ -1,7 +1,7 @@
 import React from 'react'
 import { Food_calorie_table } from "../../types/Food_calorie"
 
-const Card_calorie_table = () => {
+const CardCalorieTable = () => {
     const food_calories: Food_calorie_table[] = [
         {
             name: "rice",
@@ -46,4 +46,4 @@ const Card_calorie_table = () => {
     )
 }
 
-export default Card_calorie_table
+export default CardCalorieTable

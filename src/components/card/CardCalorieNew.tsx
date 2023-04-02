@@ -8,7 +8,7 @@ type props = {
     food_calorie_new_arr: Food_calorie_new[]
 }
 
-const Card_calorie_new = (props: props) => {
+const CardCalorieNew = (props: props) => {
     const value = useSelector((state: any) => state.new_meal.value)
     const dispatch = useDispatch()
     // const [value, setValue] = useState(3)
@@ -54,4 +54,4 @@ const Card_calorie_new = (props: props) => {
         </div>)
 }
 
-export default Card_calorie_new
+export default CardCalorieNew

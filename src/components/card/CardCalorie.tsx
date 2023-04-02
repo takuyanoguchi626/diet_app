@@ -1,7 +1,7 @@
 import React from 'react'
 import { Calorie } from '../../types/Card'
 
-const Card_calorie = (props: Calorie) => {
+const CardCalorie = (props: Calorie) => {
     return (
         <div className={"l_flex card card_default " + props.class_name}>
             <span className="material-symbols-rounded card_icon">{props.icon}</span>
@@ -11,4 +11,4 @@ const Card_calorie = (props: Calorie) => {
     )
 }
 
-export default Card_calorie
+export default CardCalorie
