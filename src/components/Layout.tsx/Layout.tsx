@@ -1,14 +1,14 @@
 import React from 'react'
 import { Children } from '../../types/Children'
 import Header from '../header/Header'
-import Navi_bottom from "../navi/Navi_bottom"
+import NaviBottom from "../navi/NaviBottom"
 
-export default function Layout(props:Children) {
+export default function Layout(props: Children) {
   return (
     <React.Fragment>
-        <Header></Header>
-        {props.children}
-        <Navi_bottom></Navi_bottom>
+      <Header></Header>
+      {props.children}
+      <NaviBottom></NaviBottom>
     </React.Fragment>
   )
 }

@@ -1,5 +1,5 @@
 
 
-export type Material_symbols = {
+export type MaterialSymbols = {
     name: string;
 }

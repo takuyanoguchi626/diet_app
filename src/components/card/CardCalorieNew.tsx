@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { Food_calorie_new } from "../../types/Food_calorie"
-import Material_symbols from "../icon/Material_symbols"
+import { Food_calorie_new } from "../../types/FoodCalorie"
+import MaterialSymbols from "../icon/MaterialSymbols"
 import { useSelector, useDispatch } from "react-redux/es/exports"
-import { decrement, increment } from "../../providers/slices/Slice_new_meal"
+import { decrement, increment } from "../../providers/slices/SliceNewMeal"
 
 type props = {
     food_calorie_new_arr: Food_calorie_new[]
@@ -41,11 +41,11 @@ const CardCalorieNew = (props: props) => {
                         </div>
                         <div className="card_item_amount">
                             <button className="card_arrow" onClick={() => dispatch(increment())}>
-                                <Material_symbols name="expand_less"></Material_symbols>
+                                <MaterialSymbols name="expand_less"></MaterialSymbols>
                             </button>
                             <span className="card_number_text">{value}</span>
                             <button className="card_arrow" onClick={() => dispatch(decrement())}>
-                                <Material_symbols name="expand_more"></Material_symbols>
+                                <MaterialSymbols name="expand_more"></MaterialSymbols>
                             </button>
                         </div>
                     </div>

@@ -1,10 +1,10 @@
 import React from 'react'
 import Login from '../pages/Login';
 import Top from '../pages/Top';
-import Plan_meal from "../pages/Plan_meal"
-import New_meal from "../pages/New_meal"
-import New_exercise from "../pages/New_exercise"
-import New_body_weight from "../pages/New_body_weight"
+import PlanMeal from "../pages/PlanMeal"
+import NewMeal from "../pages/NewMeal"
+import NewExercise from "../pages/NewExercise"
+import NewBodyWeight from "../pages/NewBodyWeight"
 import Calendar from "../pages/Calendar"
 import Mypage from "../pages/Mypage"
 
@@ -20,19 +20,19 @@ export default function Route() {
     },
     {
       path: "/plan_meal",
-      element: <Plan_meal></Plan_meal>,
+      element: <PlanMeal></PlanMeal>,
     },
     {
       path: "/new_meal",
-      element: <New_meal></New_meal>,
+      element: <NewMeal></NewMeal>,
     },
     {
       path: "/new_exercise",
-      element: <New_exercise></New_exercise>,
+      element: <NewExercise></NewExercise>,
     },
     {
       path: "/new_body_weight",
-      element: <New_body_weight></New_body_weight>,
+      element: <NewBodyWeight></NewBodyWeight>,
     },
     {
       path: "/calendar",

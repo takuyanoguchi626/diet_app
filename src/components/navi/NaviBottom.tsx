@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from "react-router-dom"
 
-const Navi_bottom = () => {
+const NaviBottom = () => {
   return (
     <div className='navi navi_bottom'>
       <NavLink className="navi_item" to={"/"}>
@@ -24,4 +24,4 @@ const Navi_bottom = () => {
   )
 }
 
-export default Navi_bottom
+export default NaviBottom

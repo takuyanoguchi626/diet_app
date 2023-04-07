@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 
-export const New_meal_slice = createSlice({
+export const NewMealSlice = createSlice({
     name: "new_meal",
     initialState: {
         breakfast: {},
@@ -19,5 +19,5 @@ export const New_meal_slice = createSlice({
     }
 })
 
-export const { increment, decrement } = New_meal_slice.actions;
-export default New_meal_slice.reducer;
+export const { increment, decrement } = NewMealSlice.actions;
+export default NewMealSlice.reducer;

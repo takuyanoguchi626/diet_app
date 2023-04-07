@@ -1,9 +1,9 @@
 import React from 'react'
 import Layout from "../components/Layout.tsx/Layout"
 import CardCalorieNew from "../components/card/CardCalorieNew"
-import { Food_calorie_new } from "../types/Food_calorie"
+import { Food_calorie_new } from "../types/FoodCalorie"
 
-const New_meal = () => {
+const NewMeal = () => {
     // 仮のデータ。fetchで持ってくる。
     const food_calories: Food_calorie_new[] = [
         {
@@ -51,4 +51,4 @@ const New_meal = () => {
         </Layout>)
 }
 
-export default New_meal
+export default NewMeal

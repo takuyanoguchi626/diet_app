@@ -1,8 +1,8 @@
 import React from 'react'
-import { Food_calorie_table } from "../../types/Food_calorie"
+import { FoodCalorieTable } from "../../types/FoodCalorie"
 
 const CardCalorieTable = () => {
-    const food_calories: Food_calorie_table[] = [
+    const food_calories: FoodCalorieTable[] = [
         {
             name: "rice",
             icon: "rice_bowl",

@@ -1,6 +1,6 @@
 
 
-export type Food_calorie_table = {
+export type FoodCalorieTable = {
     name: string;
     icon: string;
     text: string;
