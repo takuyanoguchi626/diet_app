@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { FoodCalorieNew } from "../../types/FoodCalorie"
 import MaterialSymbols from "../icon/MaterialSymbols"
 import { FoodCount, NewMeal } from "../../types/NewMeal"
-import { useSelector, useDispatch } from "react-redux/es/exports"
-import { decrement, increment, setReduxFoodCountList } from "../../providers/slices/SliceNewMeal"
+import { useDispatch } from "react-redux"
+import { setReduxFoodCountList } from "../../providers/slices/SliceNewMeal"
 
 type props = {
     foodCalorieNewArr: FoodCalorieNew[],
@@ -26,28 +26,9 @@ const CardCalorieNew = (props: props) => {
         foodCountList: initialFoodCountList
     });
 
-    // {
-    //     time: 1,
-    //         foodCountList: [
-    //         {
-    //             id: 1,
-    //                 count: 2
-    //         },
-    //         {
-    //             id: 2,
-    //                 count: 4
-    //         }
-    //     ]
-    // }
-
-
-
     return (
         <div className="card card_table card_table_new">
             {props.foodCalorieNewArr.map((foodCalorie, key) => {
-                const foodCount = newMeal.foodCountList.find((foodCount) => foodCount.id === foodCalorie.id);
-                console.log("foodCount", foodCount);
-
                 return (
                     <div key={key} className="l_flex card_item">
                         <div className="l_flex card_item_body">
@@ -59,17 +40,25 @@ const CardCalorieNew = (props: props) => {
                         </div>
                         <div className="card_item_amount">
                             <button className="card_arrow" onClick={() => {
+                                let newMeal2: NewMeal;
                                 for (let i = 0; i < newMeal.foodCountList.length; i++) {
                                     if (newMeal.foodCountList[i].id === foodCalorie.id) {
-                                        const foodCountList2 = [...newMeal.foodCountList];
+                                        const foodCountList2 = newMeal.foodCountList.map((foodCount) => {
+                                            const foodCount2 = {
+                                                id: foodCount.id,
+                                                count: foodCount.count
+                                            }
+                                            return foodCount2;
+                                        })
                                         foodCountList2[i].count++
-                                        const newMeal2 = {
+                                        newMeal2 = {
                                             time: newMeal.time,
                                             foodCountList: foodCountList2
                                         }
                                         setNewMeal(() => newMeal2);
                                     }
                                 }
+                                dispatch(setReduxFoodCountList(newMeal2));
                             }}>
                                 <MaterialSymbols name="expand_less"></MaterialSymbols>
                             </button>
@@ -82,7 +71,13 @@ const CardCalorieNew = (props: props) => {
                                         <button className="card_arrow" onClick={() => {
                                             for (let i = 0; i < newMeal.foodCountList.length; i++) {
                                                 if (newMeal.foodCountList[i].id === foodCalorie.id) {
-                                                    const foodCountList2 = [...newMeal.foodCountList];
+                                                    const foodCountList2 = newMeal.foodCountList.map((foodCount) => {
+                                                        const foodCount2 = {
+                                                            id: foodCount.id,
+                                                            count: foodCount.count
+                                                        }
+                                                        return foodCount2;
+                                                    })
                                                     foodCountList2[i].count--
                                                     const newMeal2 = {
                                                         time: newMeal.time,
@@ -91,6 +86,7 @@ const CardCalorieNew = (props: props) => {
                                                     setNewMeal(() => newMeal2);
                                                 }
                                             }
+                                            dispatch(setReduxFoodCountList(newMeal));
                                         }}>
                                             <MaterialSymbols name="expand_more"></MaterialSymbols>
                                         </button>
@@ -101,7 +97,7 @@ const CardCalorieNew = (props: props) => {
                     </div>
                 )
             })}
-        </div>)
+        </div >)
 }
 
 export default CardCalorieNew

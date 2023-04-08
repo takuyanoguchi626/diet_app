@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Layout from "../components/Layout.tsx/Layout"
 import CardCalorieNew from "../components/card/CardCalorieNew"
 import { FoodCalorieNew } from "../types/FoodCalorie"
+import { useSelector } from "react-redux"
 
 const NewMeal = () => {
     // 仮のデータ。fetchで持ってくる。
@@ -25,6 +26,18 @@ const NewMeal = () => {
             calorie: 343,
         },
     ]
+
+    const breakfast = useSelector((state: any) => state.newMeal.breakfast);
+    const lunch = useSelector((state: any) => state.newMeal.lunch);
+    const dinner = useSelector((state: any) => state.newMeal.dinner);
+    const state = {
+        breakfast,
+        lunch,
+        dinner
+    }
+
+    console.log(state);
+
 
     return (
         <Layout>
@@ -51,6 +64,9 @@ const NewMeal = () => {
                 <CardCalorieNew foodCalorieNewArr={food_calories} time={2}></CardCalorieNew>
                 <div className="title_24 text_center">よる</div>
                 <CardCalorieNew foodCalorieNewArr={food_calories} time={3}></CardCalorieNew>
+                <div>
+                    <button onClick={() => { console.log(state); }}>食事の記録を付ける</button>
+                </div>
             </div>
         </Layout>)
 }

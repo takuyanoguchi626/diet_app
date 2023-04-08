@@ -7,23 +7,23 @@ export const NewMealSlice = createSlice({
         breakfast: {},
         lunch: {},
         dinner: {},
-        value: 1
     },
     reducers: {
-        increment: (state) => {
-            state.value += 1;
-        },
-        decrement: (state) => {
-            state.value -= 1;
-        },
         setReduxFoodCountList: (state, action) => {
             if (action.payload.time === 1) {
                 state.breakfast = action.payload;
-            } else if (action.payload.time === 2) {
-                state.lunch = action.payload;
-            } else {
-                state.dinner = action.payload;
+                return;
             }
+            if (action.payload.time === 2) {
+                state.lunch = action.payload;
+                return;
+            }
+            if (action.payload.time === 3) {
+                state.dinner = action.payload;
+                return;
+            }
+            // if (action.payload.time === 2) return state.lunch = action.payload;
+            // if (action.payload.time === 3) return state.dinner = action.payload;
         }
     }
 })
