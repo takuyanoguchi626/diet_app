@@ -8,8 +8,8 @@ export type FoodCalorieTable = {
     amount: number;
 }
 
-export type Food_calorie_new = {
-    name: string;
+export type FoodCalorieNew = {
+    id: number;
     icon: string;
     text: string;
     calorie: number;

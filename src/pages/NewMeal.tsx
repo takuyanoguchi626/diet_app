@@ -1,25 +1,25 @@
 import React from 'react'
 import Layout from "../components/Layout.tsx/Layout"
 import CardCalorieNew from "../components/card/CardCalorieNew"
-import { Food_calorie_new } from "../types/FoodCalorie"
+import { FoodCalorieNew } from "../types/FoodCalorie"
 
 const NewMeal = () => {
     // 仮のデータ。fetchで持ってくる。
-    const food_calories: Food_calorie_new[] = [
+    const food_calories: FoodCalorieNew[] = [
         {
-            name: "rice",
+            id: 1,
             icon: "rice_bowl",
             text: "お茶碗１杯分",
             calorie: 343,
         },
         {
-            name: "rice",
+            id: 2,
             icon: "rice_bowl",
             text: "お茶碗１杯分",
             calorie: 343,
         },
         {
-            name: "rice",
+            id: 3,
             icon: "rice_bowl",
             text: "お茶碗１杯分",
             calorie: 343,
@@ -46,7 +46,11 @@ const NewMeal = () => {
                     </div>
                 </div>
                 <div className="title_24 text_center">あさ</div>
-                <CardCalorieNew food_calorie_new_arr={food_calories}></CardCalorieNew>
+                <CardCalorieNew foodCalorieNewArr={food_calories} time={1}></CardCalorieNew>
+                <div className="title_24 text_center">ひる</div>
+                <CardCalorieNew foodCalorieNewArr={food_calories} time={2}></CardCalorieNew>
+                <div className="title_24 text_center">よる</div>
+                <CardCalorieNew foodCalorieNewArr={food_calories} time={3}></CardCalorieNew>
             </div>
         </Layout>)
 }

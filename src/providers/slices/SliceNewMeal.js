@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 export const NewMealSlice = createSlice({
-    name: "new_meal",
+    name: "newMeal",
     initialState: {
         breakfast: {},
         lunch: {},
@@ -15,9 +15,18 @@ export const NewMealSlice = createSlice({
         },
         decrement: (state) => {
             state.value -= 1;
+        },
+        setReduxFoodCountList: (state, action) => {
+            if (action.payload.time === 1) {
+                state.breakfast = action.payload;
+            } else if (action.payload.time === 2) {
+                state.lunch = action.payload;
+            } else {
+                state.dinner = action.payload;
+            }
         }
     }
 })
 
-export const { increment, decrement } = NewMealSlice.actions;
+export const { increment, decrement, setReduxFoodCountList } = NewMealSlice.actions;
 export default NewMealSlice.reducer;
