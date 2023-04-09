@@ -3,6 +3,7 @@ import Layout from "../components/Layout.tsx/Layout"
 import CardCalorieNew from "../components/card/CardCalorieNew"
 import { FoodCalorieNew } from "../types/FoodCalorie"
 import { useSelector } from "react-redux"
+import Button from "../components/button/Button"
 
 const NewMeal = () => {
     // 仮のデータ。fetchで持ってくる。
@@ -65,7 +66,7 @@ const NewMeal = () => {
                 <div className="title_24 text_center">よる</div>
                 <CardCalorieNew foodCalorieNewArr={food_calories} time={3}></CardCalorieNew>
                 <div>
-                    <button onClick={() => { console.log(state); }}>食事の記録を付ける</button>
+                    <Button className="mt_24 radius" onclick={() => console.log(state)}>食事の記録を付ける</Button>
                 </div>
             </div>
         </Layout>)

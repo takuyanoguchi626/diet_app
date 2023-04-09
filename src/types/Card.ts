@@ -4,3 +4,10 @@ export type Calorie = {
     calorie: number,
     class_name?: string
 }
+
+export type BodyWeight = {
+    icon: string,
+    title: string,
+    bodyWeight: number,
+    class_name?: string
+}

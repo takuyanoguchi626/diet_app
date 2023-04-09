@@ -1,6 +1,10 @@
 @charset 'utf-8';
 
 
-.l_flex{
+.l_flex {
     display: flex;
+
+    &.gap_8 {
+        gap: .8rem;
+    }
 }

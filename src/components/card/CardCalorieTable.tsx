@@ -28,9 +28,9 @@ const CardCalorieTable = () => {
 
     return (
         <div className="card card_table">
-            {food_calories.map((food_calorie) => {
+            {food_calories.map((food_calorie, index) => {
                 return (
-                    <div className="l_flex card_item">
+                    <div key={index} className="l_flex card_item">
                         <div className="l_flex card_item_body">
                             <span className="material-symbols-rounded card_icon">{food_calorie.icon}</span>
                             <div className="ml_at text_right">

@@ -1,0 +1,12 @@
+@charset 'utf-8';
+
+
+.calendar {
+    background-color: colors(main_3);
+    width: 100%;
+    border: none;
+}
+
+.react-calendar__tile--now {
+    background-color: colors(accent);
+}

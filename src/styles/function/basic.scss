@@ -3,9 +3,13 @@
 
 $colors: (
     main: #FFB84D,
-    main_bg:#FFE3B8
+    main_2:#865711,
+    main_3:#FFF4E3,
+    main_bg:#FFE3B8,
+    accent:#3FB84B,
+    accent_2:#FF7777
 );
 
-@function colors($key){
-    @return map-get($map: $colors, $key:$key);
+@function colors($key) {
+    @return map-get($map: $colors, $key: $key);
 }

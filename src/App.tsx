@@ -5,7 +5,7 @@ import { Provider } from "react-redux"
 import { store } from "./providers/store"
 
 const App = () => {
-  const router = createBrowserRouter(Route())
+  const router = createBrowserRouter(Route());
 
   return (
     <Provider store={store}>
@@ -14,4 +14,4 @@ const App = () => {
   )
 }
 
-export default App
+export default App;
