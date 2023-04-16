@@ -41,7 +41,7 @@ const NewMeal = () => {
 
 
     return (
-        <Layout>
+        <Layout header={{ has_back_button: false, title: "記録を付ける" }}>
             <div className='pt_24 pr_16 pl_16 pb_90 l_layout'>
                 <div className="l_flex">
                     <p>日付</p>

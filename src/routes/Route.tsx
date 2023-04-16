@@ -1,6 +1,6 @@
 import React from 'react'
 import Login from '../pages/Login';
-import Top from '../pages/Top';
+import Home from '../pages/Home';
 import PlanMeal from "../pages/PlanMeal"
 import NewMeal from "../pages/NewMeal"
 import NewExercise from "../pages/NewExercise"
@@ -12,7 +12,7 @@ export default function Route() {
   const router = [
     {
       path: "/",
-      element: <Top></Top>,
+      element: <Home></Home>,
     },
     {
       path: "login",

@@ -19,7 +19,7 @@
         width: 100%;
         height: 6.6rem;
         background-color: colors(main);
-        border-top: .1rem solid #fff;
+        border-top: .1rem solid colors(white);
 
         .navi_item {
             display: flex;
@@ -27,7 +27,7 @@
             align-items: center;
             justify-content: center;
             width: 6rem;
-            color: #fff;
+            color: colors(white);
         }
 
         .navi_icon {

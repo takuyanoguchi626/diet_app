@@ -8,7 +8,7 @@ import Button from "../components/button/Button"
 
 const Calendar = () => {
     return (
-        <Layout>
+        <Layout header={{ has_back_button: false, title: "カレンダー" }}>
             <div className='pb_90 l_layout'>
                 <CalendarComp></CalendarComp>
                 <div className="pl_16 pr_16">

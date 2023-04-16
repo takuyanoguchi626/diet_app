@@ -3,9 +3,9 @@ import Layout from '../components/Layout.tsx/Layout'
 import CardCalorie from "../components/card/CardCalorie"
 import CardCalorieTable from "../components/card/CardCalorieTable"
 
-export default function Top() {
+export default function Home() {
 	return (
-		<Layout>
+		<Layout header={{ has_back_button: false, title: "ホーム" }}>
 			<div className='pt_24 pr_16 pl_16 pb_90 l_layout'>
 				<div className='title_24 text_center'>今日のカロリー目安</div>
 				<CardCalorie icon={"restaurant"} title={"食事の目安"} calorie={3000}></CardCalorie>
