@@ -11,3 +11,10 @@ export type BodyWeight = {
     bodyWeight: number;
     class_name?: string;
 }
+
+export type FoodAmount = {
+    amount: number,
+    icon_url: string,
+    explanation: string,
+    calorie: number
+}

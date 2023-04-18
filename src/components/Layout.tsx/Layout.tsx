@@ -5,14 +5,16 @@ import NaviBottom from "../navi/NaviBottom"
 
 type layout = {
   header: HeaderProps;
-  children: JSX.Element;
+  children: React.ReactNode;
 }
 
 export default function Layout(props: layout) {
   return (
     <React.Fragment>
       <Header has_back_button={props.header.has_back_button} title={props.header.title}></Header>
-      {props.children}
+      <div className="pt_24 pr_16 pl_16 pb_90 l_layout">
+        {props.children}
+      </div>
       <NaviBottom></NaviBottom>
     </React.Fragment>
   )
