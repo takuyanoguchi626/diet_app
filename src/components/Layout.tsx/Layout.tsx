@@ -12,7 +12,7 @@ export default function Layout(props: layout) {
   return (
     <React.Fragment>
       <Header has_back_button={props.header.has_back_button} title={props.header.title}></Header>
-      <div className="pt_24 pr_16 pl_16 pb_90 l_layout">
+      <div className="pt_24 pr_16 pl_16 pb_144 l_layout">
         {props.children}
       </div>
       <NaviBottom></NaviBottom>

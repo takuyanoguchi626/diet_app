@@ -42,32 +42,30 @@ const NewMeal = () => {
 
     return (
         <Layout header={{ has_back_button: false, title: "記録を付ける" }}>
-            <div className='pt_24 pr_16 pl_16 pb_90 l_layout'>
-                <div className="l_flex">
-                    <p>日付</p>
-                    <div className="ml_at">
-                        <input type="date" />
-                    </div>
+            <div className="l_flex">
+                <p>日付</p>
+                <div className="ml_at">
+                    <input type="date" />
                 </div>
-                <div className="l_flex">
-                    <p>項目</p>
-                    <div className="ml_at">
-                        <select name="kinds" id="">
-                            <option value="meal">食事</option>
-                            <option value="exercize">運動</option>
-                            <option value="body_weight">体重</option>
-                        </select>
-                    </div>
+            </div>
+            <div className="l_flex">
+                <p>項目</p>
+                <div className="ml_at">
+                    <select name="kinds" id="">
+                        <option value="meal">食事</option>
+                        <option value="exercize">運動</option>
+                        <option value="body_weight">体重</option>
+                    </select>
                 </div>
-                <div className="title_24 text_center">あさ</div>
-                <CardCalorieNew foodCalorieNewArr={food_calories} time={1}></CardCalorieNew>
-                <div className="title_24 text_center">ひる</div>
-                <CardCalorieNew foodCalorieNewArr={food_calories} time={2}></CardCalorieNew>
-                <div className="title_24 text_center">よる</div>
-                <CardCalorieNew foodCalorieNewArr={food_calories} time={3}></CardCalorieNew>
-                <div>
-                    <Button className="mt_24 radius" onclick={() => console.log(state)}>食事の記録を付ける</Button>
-                </div>
+            </div>
+            <div className="title_24 text_center">あさ</div>
+            <CardCalorieNew foodCalorieNewArr={food_calories} time={1}></CardCalorieNew>
+            <div className="title_24 text_center">ひる</div>
+            <CardCalorieNew foodCalorieNewArr={food_calories} time={2}></CardCalorieNew>
+            <div className="title_24 text_center">よる</div>
+            <CardCalorieNew foodCalorieNewArr={food_calories} time={3}></CardCalorieNew>
+            <div>
+                <Button className="mt_24 radius" onclick={() => console.log(state)}>食事の記録を付ける</Button>
             </div>
         </Layout>)
 }

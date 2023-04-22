@@ -3,13 +3,13 @@
 @font-face {
     font-family: 'Noto Sans JP';
     font-weight: 400;
-    src: url("/static/fonts/NotoSansJP-Regular.woff2");
+    src: url("../../dist/assets/fonts/NotoSansJP-Regular.woff2") format("woff2");
 }
 
 @font-face {
     font-family: 'Noto Sans JP';
     font-weight: 500;
-    src: url("/static/fonts/NotoSansJP-Black.woff2");
+    src: url("../../dist/assets/fonts/NotoSansJP-Black.woff2") format("woff2");
 }
 
 

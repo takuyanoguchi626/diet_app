@@ -1,0 +1,15 @@
+@charset 'utf-8';
+
+.l_grid {
+    display: grid;
+}
+
+.grid_auto {
+    grid-template-columns: repeat(auto-fill, 10.9rem);
+    justify-content: center;
+    align-items: center;
+
+    &.gap_8 {
+        gap: .8rem;
+    }
+}
